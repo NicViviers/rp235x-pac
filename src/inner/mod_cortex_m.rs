@@ -318,7 +318,7 @@ pub enum Interrupt {
     #[doc = "51 - Spare IRQ 5"]
     SW5_IRQ = 51,
 }
-unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
+unsafe impl crate::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
     fn number(self) -> u16 {
         self as u16
